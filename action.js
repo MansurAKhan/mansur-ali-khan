@@ -18,7 +18,7 @@ if(isMobile == true){
 }
 
 function initialize(){
-    count = 10000000000;
+    count = 10;
     counterDisplayElem.innerHTML = count;
     accident = false;
 }
