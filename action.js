@@ -17,6 +17,13 @@ if(isMobile == true){
     alert("please rotate your device for better game quality.")
 }
 
+setInterval(function(){
+    if(isMobile == true){
+    if(window.innerHeight > window.innerWidth){
+        alert("Please Rotate Your Device To Landscape!");
+    }}
+},10);
+
 function initialize(){
     count = 10;
     counterDisplayElem.innerHTML = count;
