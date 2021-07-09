@@ -12,6 +12,7 @@ h1{
     text-align: center;
     position: absolute;
     left: 11em;
+    font-size: 3em;
 }
 
 h1, h2, h3, h4, h5, h6, p, pre{
@@ -56,7 +57,7 @@ h1, h2, h3, h4, h5, h6, p, pre{
 .counter-display{
     position: absolute;
     right: 20px;
-    font-size: 50px;
+    font-size: 3em;
 
 
 }
