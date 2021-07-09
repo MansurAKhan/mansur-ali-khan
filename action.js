@@ -1,6 +1,7 @@
 var character = document.getElementById("character");
 var car = document.getElementById("car");
 var potatoman = document.getElementById("potatoman");
+var mariolook = document.getElementById("mariolook");
 let count;
 let accident;
 let counterDisplayElem = document.querySelector('.counter-display');
@@ -23,9 +24,15 @@ function count_decrease(){
 function jump(){
     if(character.classList != "animate"){
     character.classList.add("animate");
+    document.getElementById("mariolook").src="JumpingMario.png";
+    character.style.width="60px"
+
     }
     setTimeout(function(){
         character.classList.remove("animate");
+        document.getElementById("mariolook").src="Mario.png";
+        character.style.width="40px"
+        character.style.height="150px"
     },500);
 }
 
@@ -35,12 +42,33 @@ document.body.onkeyup = function(a){
     }
 }
  
-function person_standup(){
+function wait(ms){
+    var start = new Date().getTime();
+    var end = start;
+    while(end < start + ms) {
+      end = new Date().getTime();
+   }
+ }
 
-}
 
 function person_falldown(){
-    
+    document.getElementById("mariolook").src="hurtmario.png"
+    character.style.top="320px"
+    character.style.width="375px"
+    character.style.height="38px"
+    console.log('before');
+wait(1); 
+console.log('after');
+}
+
+function person_standup(){
+    console.log('before');
+    wait(500); 
+    console.log('after');
+    document.getElementById("mariolook").src="Mario.png"
+    character.style.top="290px"
+    character.style.width="40px"
+    character.style.height="150px"
 }
 
 var checkDeadpotatoman = setInterval(function(){
@@ -57,7 +85,7 @@ var checkDeadpotatoman = setInterval(function(){
         accident = false;
         person_standup();
     }
-},200);
+},100);
 
 
 var checkDeadCar = setInterval(function(){
@@ -65,7 +93,7 @@ var checkDeadCar = setInterval(function(){
     var carleft = parseInt(window.getComputedStyle(car).getPropertyValue("left"));
     
     if(carleft<80 && carleft>40 && charactertop>=290 && accident==false){
-        count_decrease()
+        count_decrease();
         accident = true;
         person_falldown();
     }
