@@ -67,14 +67,13 @@ h1, h2, h3, h4, h5, h6, p, pre{
     height: 100px;
     position: absolute;
     top: 290px;
-    left: 100%;
+    left: 50%;
     animation-delay: 2s;
     animation: potato 7s infinite linear;
-    z-index: 3;
 }
 
 @keyframes potato{
-    0%{left:1500px;}
+    0%{left:100%;}
     100%{left:-40px;}
 }
 
@@ -85,10 +84,9 @@ h1, h2, h3, h4, h5, h6, p, pre{
     top: 300px;
     left: 480px;
     animation: block 4s infinite linear;
-    z-index: 2;
 }
 @keyframes block{
-    0%{left:1500px;}
+    0%{left:100%;}
     100%{left:-40px;}
 }
 
