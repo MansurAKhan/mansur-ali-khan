@@ -17,11 +17,11 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     isMobile = true;
 }
 
-//function SkinLuigi(){
-//DefSkin="Luigi.png"
-//JumpSkin="LuigiJump.png"
-//HurtSkin=""
-//}
+function SkinLuigi(){
+DefSkin="Luigi.png"
+JumpSkin="LuigiJump.png"
+HurtSkin=""
+}
 
 setInterval(function(){
     if(isMobile == true){
