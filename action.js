@@ -31,7 +31,7 @@ setInterval(function(){
 },10);
 
 function initialize(){
-    count = 10;
+    count = 3;
     counterDisplayElem.innerHTML = count;
     accident = false;
 }
