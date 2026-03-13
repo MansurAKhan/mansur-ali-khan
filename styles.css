@@ -85,9 +85,21 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
+  backdrop-filter: blur(0);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    backdrop-filter 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.site-header.scrolled {
   backdrop-filter: blur(14px);
   background: rgba(8, 15, 26, 0.86);
-  border-bottom: 1px solid rgba(232, 168, 56, 0.18);
+  border-bottom-color: rgba(232, 168, 56, 0.18);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
 }
 
 .nav-wrap {
