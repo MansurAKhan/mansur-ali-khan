@@ -360,6 +360,32 @@ a {
   margin-top: 1rem;
 }
 
+.policy-media-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(220px, 0.7fr);
+  gap: 1.15rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.policy-video {
+  width: min(100%, 560px);
+  display: block;
+  justify-self: start;
+  border-radius: 14px;
+  border: 1px solid rgba(58, 123, 213, 0.22);
+  background: var(--panel-deep);
+  aspect-ratio: 16 / 9;
+  min-height: 220px;
+}
+
+.policy-hearing-meta {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 0;
+  align-content: start;
+}
+
 .research-card {
   border-left-color: var(--accent);
 }
@@ -450,6 +476,10 @@ a {
 @media (max-width: 920px) {
   .hero-grid,
   .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .policy-media-grid {
     grid-template-columns: 1fr;
   }
 
