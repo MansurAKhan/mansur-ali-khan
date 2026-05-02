@@ -18,6 +18,16 @@ if (siteHeader) {
   window.addEventListener("scroll", syncHeaderState, { passive: true });
 }
 
+const themeToggle = document.getElementById("themeToggle");
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+    const next = current === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("theme", next); } catch (e) {}
+  });
+}
+
 const yearNode = document.getElementById("year");
 if (yearNode) {
   yearNode.textContent = String(new Date().getFullYear());

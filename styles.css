@@ -568,3 +568,67 @@ a {
     line-height: 1.1;
   }
 }
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-left: 0.35rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.theme-toggle:hover {
+  color: var(--accent-soft);
+  border-color: rgba(232, 168, 56, 0.45);
+  background: rgba(232, 168, 56, 0.09);
+  transform: translateY(-1px);
+}
+
+[data-theme="light"] .theme-icon-sun { display: none; }
+:root:not([data-theme="light"]) .theme-icon-moon { display: none; }
+
+:root[data-theme="light"] {
+  --bg: #f5efe0;
+  --panel: #ffffff;
+  --panel-deep: #ebe3cd;
+  --accent: #b8821e;
+  --accent-soft: #936713;
+  --text: #1a2238;
+  --white: #0c1624;
+  --muted: #56708c;
+  --info: #2c5fa4;
+  --border: rgba(184, 130, 30, 0.35);
+  --shadow: 0 16px 48px rgba(20, 30, 50, 0.10);
+}
+
+[data-theme="light"] .hero-copy,
+[data-theme="light"] .highlight-card,
+[data-theme="light"] .card,
+[data-theme="light"] .bibtex-details,
+[data-theme="light"] .coverage-list li {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 242, 226, 0.98));
+}
+
+[data-theme="light"] .site-header.scrolled {
+  background: rgba(245, 239, 224, 0.86);
+  border-bottom-color: rgba(184, 130, 30, 0.22);
+  box-shadow: 0 8px 22px rgba(20, 30, 50, 0.08);
+}
+
+@media (max-width: 700px) {
+  [data-theme="light"] .main-nav {
+    background: rgba(255, 255, 255, 0.96);
+  }
+}
