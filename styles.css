@@ -621,6 +621,17 @@ a {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 242, 226, 0.98));
 }
 
+[data-theme="light"] .hero-meta span,
+[data-theme="light"] .link-row a {
+  background: rgba(184, 130, 30, 0.08);
+  border-color: rgba(184, 130, 30, 0.32);
+  color: var(--text);
+}
+
+[data-theme="light"] .link-row a {
+  color: var(--accent-soft);
+}
+
 [data-theme="light"] .site-header.scrolled {
   background: rgba(245, 239, 224, 0.86);
   border-bottom-color: rgba(184, 130, 30, 0.22);
