@@ -179,7 +179,6 @@ a {
 }
 
 .hero h1 {
-  max-width: 11ch;
   font-size: clamp(2.4rem, 4vw, 3rem);
 }
 
